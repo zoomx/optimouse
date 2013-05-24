@@ -46,8 +46,10 @@ static int uart_putchar(char c, FILE *stream) {
 #include "Buffer.h"
 #include "ADNS2610.h"
 
+#error Make sure you specify SCLK and SDIO pins that reflect your hardware configuration! Then, just comment out or delete this line.
 static int const SCLK = 3;		// Serial clock pin on the Arduino
 static int const SDIO = 2;		// Serial data (I/O) pin on the Arduino
+
 static char const WHITESPACE[] = " \t\r\n\v\f";
 static int const MAX_TOKEN_SIZE = 64;
 
